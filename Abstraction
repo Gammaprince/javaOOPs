@@ -1,0 +1,3 @@
+
+Abstraction is the process of hiding the underlying details of an object or system and only exposing the essential information to the user
+Abstraction in Java can be achieved using two main mechanisms: abstract classes and interfaces.
