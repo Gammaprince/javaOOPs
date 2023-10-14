@@ -1,0 +1,28 @@
+In java you can call by referrence only objects not primitives.
+for primitives there is call by value , which would pass actual copy of primitive value in method so that original value would not change 
+
+change(29);
+void change(int age){
+ age = 20;
+}
+original age would not change as it has been passed by value , which is actual copy of original age in change method.
+
+class Person{
+int age;
+String name;
+public Person(String name , int age){
+    this.name = name;
+    this.age = age;
+}
+}
+
+Person person = new Person("Ben",12);
+void change(Person person){
+    person.name = "Gwen";
+}
+// This will change name of Person from Ben to Gwen , because referrence is passed to heap memory which is actual object , 
+so changing anythin to same object will reflect in all references. and vice versa.
+
+// If we want to call by value of Object then we can make copy of original object and pass to method , to copoy object we have cloneable interface , but this copy is not deep copy 
+it is shallow copy , which is only valid for primitives data types not for references . so to make complete deep copy you have to manually copy object one by one , which is quite time consuming
+so you can also use some third party libraries to this thing 
