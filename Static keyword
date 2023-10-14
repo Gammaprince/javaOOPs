@@ -1,0 +1,34 @@
+The static keyword in Java is used for memory management mainly. We can apply static keyword with variables, 
+methods, blocks and nested classes. The static keyword belongs to the class than an instance of the class.
+
+The static can be:
+
+Variable (also known as a class variable)
+Method (also known as a class method)
+Block
+Nested class
+
+The static variable gets memory only once in the class area at the time of class loading.
+
+Advantages of static variable
+It makes your program memory efficient (i.e., it saves memory).
+
+Static method -> You can call static method from class without actually instantiate classs, static method can't call non-static method or non-static variables
+
+Java static block ->
+ 1 - Is used to initialize the static data member.
+ 2 - It is executed before the main method at the time of classloading.
+ eg-> class A2{  
+     static{System.out.println("static block is invoked");}  
+     public static void main(String args[]){  
+     System.out.println("Hello main");  
+     }  
+   }  
+
+Some Questions for Interview : 
+Q) Can we execute a program without main() method?
+Ans) No, one of the ways was the static block, but it was possible till JDK 1.6. Since JDK 1.7, it is not possible to execute a Java class without the main method.
+
+
+Q) Why is the Java main method static?
+Ans) It is because the object is not required to call a static method. If it were a non-static method, JVM creates an object first then call main() method that will lead the problem of extra memory allocation.
